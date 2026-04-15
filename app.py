@@ -351,8 +351,8 @@ def main():
                 # Feature Importance
                 st.markdown("---")
                 st.subheader("Feature Importance")
-                feature_names = ['total_pnl', 'trade_count', 'win_rate', 'leverage_proxy', 
-                                'avg_trade_size', 'long_ratio', 'sentiment_score']
+                feature_names = ['fg_score', 'sentiment_encoded', 'leverage_proxy',
+                 'trade_count', 'long_ratio', 'avg_trade_size', 'pnl_std']
                 importances = model_prof.feature_importances_
                 
                 feature_importance_df = pd.DataFrame({
