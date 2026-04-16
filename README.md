@@ -1,5 +1,5 @@
 # Trader Performance vs Market Sentiment Analysis
-### Primetrade.ai — Data Science Intern Assignment
+
 
 A complete end-to-end analysis of how Bitcoin market sentiment (Fear/Greed) influences trader behaviour and profitability on Hyperliquid, including ML models and an interactive Streamlit dashboard.
 
@@ -42,11 +42,9 @@ A complete end-to-end analysis of how Bitcoin market sentiment (Fear/Greed) infl
 
 ## Installation
 
-```bash
-pip install -r requirements.txt
-```
 
----
+pip install -r requirements.txt
+
 
 ## Usage
 
@@ -67,9 +65,9 @@ Generates all output files inside `/outputs/`:
 streamlit run app.py
 ```
 
-Dashboard opens at `http://localhost:8501/`
 
----
+
+
 
 ## Part A — Data Preparation
 
@@ -173,9 +171,9 @@ Chart 4 shows Degen avg PnL on Fear days = -$23.8 (negative), while on Greed day
 
 **Rationale:** Grinders' edge is spread/fee capture across many small trades. Their strategy degrades in fast-trending conditions but remains robust during volatile, mean-reverting Fear phases.
 
----
 
-## Bonus — Predictive Models
+
+
 
 ### Profitability Prediction (Binary Classification)
 - **Task:** Predict whether a trader will be profitable the *next* day
@@ -195,19 +193,9 @@ Chart 4 shows Degen avg PnL on Fear days = -$23.8 (negative), while on Greed day
 - Cluster_B: High-volume, high-PnL traders (overlaps Whale/Grinder)
 - Cluster_C: Niche high-leverage Whales
 
----
 
-## Evaluation Criteria Addressed
 
-| Criterion | How Addressed |
-|---|---|
-| Data cleaning + merge correctness | Documented in Section 1–2 of analysis output; inner join on date, duplicate removal, 99th-pct leverage cap |
-| Strength of reasoning | Mann-Whitney U tests; segment-level breakdowns; time-aware ML split |
-| Quality of insights | 4 specific, data-backed insights; Whale counter-intuitive finding highlighted |
-| Clarity of communication | This README + inline section headers in analysis_clean.py |
-| Reproducibility | Single script entry point; all outputs deterministic (random_state=42) |
 
----
 
 ## Technical Stack
 
